@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://vr7vl8o5c3mn"]
+
+[ext_resource type="PackedScene" uid="uid://g88dmcpcfyu7" path="res://scene/ui/card_group.tscn" id="1_ug47o"]
+
+[node name="Main" type="Node2D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="CardGroup" parent="UI" instance=ExtResource("1_ug47o")]
+
+[node name="Button" type="Button" parent="UI"]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 32
+text = "抽卡"
+
+[connection signal="pressed" from="UI/Button" to="UI/CardGroup" method="_on_button_pressed"]

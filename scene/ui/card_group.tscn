@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://g88dmcpcfyu7"]
+
+[ext_resource type="Script" path="res://scene/ui/card_group.gd" id="1_rehnf"]
+
+[node name="CardGroup" type="Control"]
+custom_minimum_size = Vector2(1280, 128)
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -640.0
+offset_top = -128.0
+offset_right = 640.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("1_rehnf")
+
+[connection signal="child_order_changed" from="." to="." method="_on_child_order_changed"]
